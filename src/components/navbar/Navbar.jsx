@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ContactButton from '../contactButton/ContactButton';
 import { Link } from 'react-scroll'
 
-const Navbar = ({ links=[], logo, contactText }) => {
+const Navbar = ({ links = [], logo, contactText }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
@@ -53,35 +53,37 @@ const Navbar = ({ links=[], logo, contactText }) => {
               />
             </svg>
           </button>
-          <div className="hidden lg:block">
+          <div className="hidden lg:block cursor-pointer">
             <Link
-             activeClass="active"
-             to={contactText}
-             spy={true}
-             smooth={true}
-             offset={-70}
-             duration={500}> <ContactButton contactText={contactText} /></Link>
+              activeClass="active"
+              to={contactText}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}> <ContactButton contactText={contactText} /></Link>
           </div>
         </div>
       </div>
       <div className={`lg:hidden overflow-hidden transition-all duration-1000 ease-in-out ${isNavOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} bg-white`}>
         <ul className="flex flex-col items-start p-4 space-y-4 transform transition-opacity duration-1000 ease-in-out bg-gray-200 m-6">
           {links.map((link, index) => (
-            <li key={index} className="text-lg font-bold text-black hover:text-blue-600 py-2 border-b-2 border-gray-400 w-full">
-              <Link
-                activeClass="active"
-                to={link.name}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}>
+            <Link
+              className="text-lg font-bold text-black hover:text-primary-500 py-2 border-b-2 border-gray-400 w-full cursor-pointer"
+              key={index}
+              activeClass="active"
+              to={link.name}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+              <li >
                 {link.name}
-              </Link>
-            </li>
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
-    </nav>
+    </nav >
   );
 };
 
