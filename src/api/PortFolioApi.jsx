@@ -15,8 +15,13 @@ export const portFolioApi = createApi({
         url: configUrl.getAboutUs+populate,
       }),
     }),
+    getInnovations: builder.query({
+      query: () =>({
+        url: configUrl.getInnovations,
+      }),
+    }),
   }),
 })
 
 
-export const { useGetLogosQuery ,useGetAboutUsQuery} = portFolioApi;
+export const { useGetLogosQuery ,useGetAboutUsQuery  ,useGetInnovationsQuery} = portFolioApi;
