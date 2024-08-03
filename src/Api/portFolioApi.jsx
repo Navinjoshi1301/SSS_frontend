@@ -22,7 +22,11 @@ export const portFolioApi = createApi({
     getAboutUs: builder.query({
       query: ({populate}) =>({
         url: configUrl.getAboutUs+populate,
-        params: { populate: 'populate=*', ...params },
+      }),
+    }),
+    getInnovations: builder.query({
+      query: () =>({
+        url: configUrl.getInnovations,
       }),
     }),
   }),
@@ -30,4 +34,4 @@ export const portFolioApi = createApi({
 })
 
 
-export const { useGetLogosQuery , useGetServicesQuery ,useGetAboutUsQuery} = portFolioApi;
+export const { useGetLogosQuery , useGetServicesQuery ,useGetAboutUsQuery , useGetInnovationsQuery}= portFolioApi;
