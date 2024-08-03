@@ -1,3 +1,4 @@
+import ContactButtun from "../contactButton/ContactButton"
 const Contact = () => {
   return (
     <div className="relative z-10 flex justify-center">
@@ -20,7 +21,7 @@ const Contact = () => {
             <div className="mb-6">
               <textarea placeholder="Enter Message" className="w-full p-8 border border-gray-300 rounded h-24"></textarea>
             </div>
-            <button type="submit" className="px-8 py-3 text-black border border-cyan-500 rounded-full">Contact Us</button>
+            <ContactButtun contactText={"Contact Us"}/>
           </form>
         </div>
         <div className="mt-0 lg:mt-24 relative flex justify-center items-center lg:ml-4">

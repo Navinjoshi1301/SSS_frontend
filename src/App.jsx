@@ -8,27 +8,19 @@ import './App.css'
 // import Gallery from './components/gallery/Gallery'
 // import  Home  from './components/home/Home'
 import Main from './components/main/Main'
-import NavbarSlice from './components/navbar/NavbarSlice'
+// import NavbarSlice from './components/navbar/NavbarSlice'
 // import NavbarSlice from './components/navbar/NavbarSlice'
 // import Services  from './components/services/Services'
 // import Ourteam from './components/teams/OurTeam'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
 
   return (
     <>
-    <NavbarSlice/>
+    {/* <NavbarSlice/> */}
+    <Navbar/>
     <Main/>
-    {/* <NavbarSlice/>
-    <Home/>
-    <About/>
-    <Services/>
-    <Ourteam/>
-    <Gallery/>
-    <Contact/>
-    <Cards/>
-    <Companies/>
-    <Footer/> */}
     </>
   )
 }

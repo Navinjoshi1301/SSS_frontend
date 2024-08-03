@@ -1,10 +1,9 @@
 import SSSlogo from "../../assets/SSS-Logo-project.png";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoCallSharp } from "react-icons/io5";
-import { MdMailOutline } from "react-icons/md";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaLocationArrow } from 'react-icons/fa';
+import { IoIosArrowForward } from 'react-icons/io';
+import { IoCallSharp } from 'react-icons/io5';
+import { MdMailOutline } from 'react-icons/md';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
@@ -12,14 +11,14 @@ const Footer = () => {
       <footer className="pt-4">
         <div className="container-fluid px-4 md:px-28 bg-slate-50">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-10">
-            <div className="flex flex-col  md:items-start">
+            <div className="flex flex-col md:items-start">
               <img
                 src={SSSlogo}
                 alt="Singaji Software Solutions"
                 className="h-15 mb-8"
               />
               <ul className="flex space-x-3 ">
-                <li className="bg-slate-200 p-2 rounded-lg">
+                <li className="bg-slate-200 p-2 rounded-lg ">
                   <a
                     href="https://instagram.com"
                     target="_blank"
@@ -40,66 +39,57 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="flex flex-col  md:items-center">
-              <ul>
-                <li className="mb-2 text-lg">
-                  <a href="/" className="flex">
-                    <IoIosArrowForward className="mt-1  hover:text-primary-500" />
+            <div className="flex flex-col md:items-center">
+              <ul className="cursor-pointer">
+                <li className="mb-2 text-lg ">
+                  <Link to="Home" className="flex" smooth={true} duration={500}>
+                    <IoIosArrowForward className="mt-1 hover:text-primary-500" />
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2 text-lg">
-                  <a href="/about" className="flex ">
-                    {" "}
-                    <IoIosArrowForward className="mt-1  hover:text-primary-500" />{" "}
+                  <Link to="About Us" className="flex" smooth={true} duration={500}>
+                    <IoIosArrowForward className="mt-1 hover:text-primary-500" />
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2 text-lg">
-                  <a href="/services" className="flex">
-                    {" "}
-                    <IoIosArrowForward className="mt-1  hover:text-primary-500" />{" "}
+                  <Link to="Services" className="flex" smooth={true} duration={500}>
+                    <IoIosArrowForward className="mt-1 hover:text-primary-500" />
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2 text-lg">
-                  <a href="/team" className="flex">
-                    {" "}
-                    <IoIosArrowForward className="mt-1  hover:text-primary-500" />
+                  <Link to="Our Team" className="flex" smooth={true} duration={500}>
+                    <IoIosArrowForward className="mt-1 hover:text-primary-500" />
                     Our Team
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2 text-lg">
-                  <a href="/testimonials" className="flex">
-                    {" "}
-                    <IoIosArrowForward className="mt-1  hover:text-primary-500" />
+                  <Link to="Testimonials" className="flex" smooth={true} duration={500}>
+                    <IoIosArrowForward className="mt-1 hover:text-primary-500" />
                     Testimonials
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
-            <div className="flex flex-col  md:items-start">
-              <h4 className="font-bold mb-2 text-2xl"> Our Contact</h4>
+            <div className="flex flex-col md:items-start">
+              <h4 className="font-bold mb-2 text-2xl">Our Contact</h4>
               <div className="flex">
-                {" "}
-                <IoCallSharp className="mt-1 me-3 h-5 w-5  hover:text-primary-500" />{" "}
-                <p className="text-gray-800 font-semibold"> 9098458119</p>
+                <IoCallSharp className="mt-1 me-3 h-5 w-5 hover:text-primary-500" />
+                <p className="text-gray-800 font-semibold">9098458119</p>
               </div>
               <div className="flex">
-                {" "}
-                <MdMailOutline className="mt-1 me-3 h-5 w-5  hover:text-primary-500" />{" "}
-                <p className="text-gray-800 font-semibold">
-                  contact@singaji.in
-                </p>
+                <MdMailOutline className="mt-1 me-3 h-5 w-5 hover:text-primary-500" />
+                <p className="text-gray-800 font-semibold">contact@singaji.in</p>
               </div>
             </div>
 
-            <div className="flex flex-col  md:items-start">
+            <div className="flex flex-col md:items-start">
               <h4 className="font-bold mb-2 text-2xl">Location</h4>
               <div className="flex">
-                {" "}
-                <FaLocationArrow className="me-3 h-11 w-11 hover:text-primary-500" />{" "}
+                <FaLocationArrow className="me-3 h-11 w-11 hover:text-primary-500" />
                 <p className="text-gray-800 font-semibold">
                   Sant Singaji Institute of Science and Management, NH-59A,
                   Sandalpur, Madhya Pradesh 455339
@@ -107,13 +97,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          {/* <div className="text-center md:text-left bg-gray-800 text-white p-6 mt-4">
-          <p>© Singaji Software Solutions 2023 | All Rights Reserved</p>
-        </div> */}
         </div>
 
-        <div className=" md:text-left bg-gray-800 text-white p-6   ">
+        <div className="md:text-left bg-gray-800 text-white p-6">
           <p>© Singaji Software Solutions 2023 | All Rights Reserved</p>
         </div>
       </footer>

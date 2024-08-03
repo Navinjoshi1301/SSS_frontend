@@ -1,3 +1,5 @@
+
+
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { BASE_URL, configUrl } from './Config';
 
@@ -25,8 +27,23 @@ export const portFolioApi = createApi({
         url: configUrl.getInnovations,
       }),
     }),
+    getTestimonials: builder.query({
+      query: () =>({
+        url: configUrl.getTestimonials,
+      }),
+    }),
+    getTeam: builder.query({
+      query: ({ populate }) => ({
+        url: configUrl.getTeam + populate,
+      }),
+    }),
+    getProjects: builder.query({
+      query: () => ({
+        url: configUrl.getProjects,
+      }),
+    })
   }),
 })
 
 
-export const { useGetLogosQuery ,useGetServicesQuery,useGetAboutUsQuery  ,useGetInnovationsQuery} = portFolioApi;
+export const { useGetLogosQuery ,useGetServicesQuery,useGetAboutUsQuery  ,useGetInnovationsQuery ,useGetTestimonialsQuery ,useGetTeamQuery ,useGetProjectsQuery} = portFolioApi;

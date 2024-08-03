@@ -1,28 +1,42 @@
-import tofrum from "../../assets/Tofrum-project.jpg";
-import Aeromatric from "../../assets/Aeromatric-project.jpg";
-import cyber from "../../assets/Cyberstash-project.jpg";
-import zool from "../../assets/SSS-Logo-project.png";
+import { useGetLogosQuery } from "../../api/PortFolioApi";
 
 const Companies = () => {
+  const { data: logos, isLoading: isLoadingLogos, error: errorLogos } = useGetLogosQuery({ populate: '*' });
+
+  if (isLoadingLogos) {
+    return <div>Loading logos...</div>;
+  }
+
+  if (errorLogos) {
+    return <div>Error loading logos</div>;
+  }
+
+  const logoMap = logos?.data.reduce((acc, logo) => {
+    acc[logo.attributes.name.toLowerCase()] = logo.attributes.img_url;
+    return acc;
+  }, {});
+
+  const companies = [
+    { name: "Tofrum", logoName: "tofrum" },
+    { name: "Aeromatric", logoName: "airometric" },
+    { name: "Cyberstash", logoName: "cyberstash" },
+    { name: "Zool", logoName: "zool" }
+  ];
+
   return (
-    <>
-      <div className="px-24 mb-10">
-        <div className="flex justify-around">
-          <div className="">
-            <img src={tofrum} />
+    <div className="px-24 mb-10">
+      <div className="flex justify-around">
+        {companies.map(company => (
+          <div key={company.name} className="">
+            <img
+              src={logoMap[company.logoName.toLowerCase()]}
+              alt={company.name}
+              className="object-cover"
+            />
           </div>
-          <div className="">
-            <img src={Aeromatric} />
-          </div>
-          <div className="">
-            <img src={cyber} />
-          </div>
-          <div className="">
-            <img src={zool} />
-          </div>
-        </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

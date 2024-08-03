@@ -4,5 +4,8 @@ export const configUrl = {
   getLogos:"/api/logos?",
   getServices:"/api/services?",
   getAboutUs:"/api/about-uses?",
-  getInnovations:"/api/innovations"
+  getInnovations:"/api/innovations",
+  getTestimonials:"/api/testimonials",
+  getTeam: "/api/teams?",
+  getProjects:"/api/projects"
 };

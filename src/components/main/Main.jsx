@@ -8,51 +8,48 @@ import Gallery from '../gallery/Gallery';
 import ContactCard from '../cards/Cards';
 import Companies from '../companies/Companies';
 import Services from '../services/Services';
-import OurTeam from '../teams/OurTeam'
+import OurTeam from '../teams/OurTeam';
 import Testimonials from '../testImonials/TestImonials';
-
-
 
 const data = {
     tagline: 'IT SOLUTIONS FOR THE FUTURE',
     title: 'We Bring Ideas To Life.',
     subtitle: 'Our team of experts are here to help you.',
     contactText: 'Contact Us +',
-    imageUrl:homeimg
-  };
-
+    imageUrl: homeimg
+};
 
 const Main = () => {
   return (
     <div>
       <Element name="Home">
-      <Home
-        tagline={data.tagline}
-        title={data.title}
-        subtitle={data.subtitle}
-        contactText={data.contactText}
-        imageUrl={data.imageUrl}
-      />
+        <Home
+          tagline={data.tagline}
+          title={data.title}
+          subtitle={data.subtitle}
+          contactText={data.contactText}
+          imageUrl={data.imageUrl}
+        />
       </Element>
       <Element name="About Us">
         <About />
       </Element>
       <Element name="Services">
-        <Services/>
+        <Services />
       </Element>
       <Element name="Our Team">
-       <OurTeam/>
+        <OurTeam />
       </Element>
-      <Gallery/>
+      <Gallery />
       <Element name="Testimonials">
         <Testimonials />
-      </Element> 
+      </Element>
       <Element name="Contact Us +">
         <Contact />
       </Element>
-      <ContactCard/>
-      <Companies/>
-      <Footer/>
+      <ContactCard />
+      <Companies />
+      <Footer />
     </div>
   );
 };
