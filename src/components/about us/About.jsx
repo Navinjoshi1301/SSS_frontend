@@ -2,13 +2,13 @@ import  { useEffect, useState } from 'react';
 // import projectimg from '../../assets/projectimg1.jpg';
 // import backgroundImage from '../../../src/assets/14-2.png'
 import { useGetAboutUsQuery } from '../../api/portFolioApi';
+import Innovation from '../Innovation/Innovation';
 // import { BASE_URL } from '../../api/config';
 
 export const About = () => {
   const[about,setAbout]=useState([])
   const[aboutImg,setAboutImg]=useState([])
   
-  // const [selectedTab, setSelectedTab] = useState(0);
   const { data,error} = useGetAboutUsQuery();
   
   useEffect(() => {
@@ -51,31 +51,7 @@ export const About = () => {
         </p>
       </div>
     </div>
-
-      {/* <div className=" flex flex-col items-center ">
-        <div className="w-full max-w-5xl  shadow-md rounded-md bg-slate-gradient">
-          <nav className="flex justify-between border-b">
-            {tabs.map((tab, index) => (
-              <button
-                key={index}
-                className={`w-full py-4 px-6 text-center transition-colors duration-300 font-bold text-xl   ${
-                  index === selectedTab
-                    ? 'text-primary-500  border-b-2 border-blue-500'
-                    : ' hover:text-blue-500'
-                }`}
-                onClick={() => setSelectedTab(index)}
-              >
-                {tab.name}
-              </button>
-            ))}
-          </nav>
-          <TabContent
-            title={tabs[selectedTab].title}
-            content={tabs[selectedTab].content}
-            image={tabs[selectedTab].image}
-          />
-        </div>
-      </div> */}
+    <Innovation/>
     </>
   );
 };

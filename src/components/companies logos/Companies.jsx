@@ -1,26 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import tofrum from "../../assets/Tofrum-project.jpg";
 import Aeromatric from "../../assets/Aeromatric-project.jpg";
 import cyber from "../../assets/Cyberstash-project.jpg";
 import zool from "../../assets/Zool.jpg";
+import { useGetLogosQuery } from "../../api/portFolioApi";
 
 const Companies = () => {
+  const [logos, setLogos] = useState([])
+  const { data, error } = useGetLogosQuery();
+  useEffect(() => {
+    if (error) {
+      console.error("Failed to fetch logos", error);
+      return;
+    }
+    else if (data) {
+      setLogos(data.data.filter((_, index) => index !== 4 && index > 0 && index < 6));
+    }
+  }, [data, error]);
+
   return (
     <>
       <div className="px-0 md:px-20 lg:px:24 mb-10">
         <div className="block p-1 md:flex justify-around">
-          <div className="m-2 md:m-0">
-            <img src={tofrum} />
-          </div>
-          <div className="m-2 md:m-0">
-            <img src={Aeromatric} />
-          </div>
-          <div className="m-2 md:m-0">
-            <img src={cyber} />
-          </div>
-          <div className="m-2 md:m-0">
-            <img src={zool} />
-          </div>
+          {logos.map((logo,index) => (
+            <div key={index} className="m-2 md:m-0">
+              <img src={logo.attributes.img_url} />
+            </div>
+          ))}
+
         </div>
       </div>
     </>

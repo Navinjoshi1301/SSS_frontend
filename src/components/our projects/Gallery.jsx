@@ -20,7 +20,7 @@ const Gallery = () => {
     data: logoData,
     error: logoError,
     isLoading: logoIsLoading,
-    isFetching: logoIsFetching, 
+    isFetching: logoIsFetching,
   } = useGetLogosQuery();
   const {
     data: projectsData,
@@ -35,27 +35,30 @@ const Gallery = () => {
       console.log(projectsError);
     } else if (logoData && projectsData) {
       //logos data
-      const logoUrls = logoData.data.slice(4, 8).map((logoItem) => (logoItem.attributes.img_url));
+      const logoUrls = logoData.data
+        .filter((_, index) => index !== 5 && index > 3)
+        .map((logoItem) => logoItem.attributes.img_url);
+
       //setting data to state for logo images
       setBrandingImages(logoUrls);
       //application data
       const applicationUrls = projectsData.data.slice(0, 3).map((projectItem) => (projectItem.attributes.img_url));
-       //setting data to state for application images
+      //setting data to state for application images
       setApplicationImages(applicationUrls);
       //web applications data
       const webApplicationUrls = projectsData.data.slice(3, 6).map((projectItem) => (projectItem.attributes.img_url));
-       //setting data to state for webapplication images
+      //setting data to state for webapplication images
       setWebApplicationImages(webApplicationUrls);
 
     }
-  }, [logoData,projectsData]);
+  }, [logoData, projectsData]);
 
   const projectImages = {
     Applications: applicationImages,
     Branding: brandingImages,
-    WebApplications:webApplicationImages,
+    WebApplications: webApplicationImages,
   };
-  
+
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -102,20 +105,20 @@ const Gallery = () => {
         </nav>
 
         <div className=" justify-center px-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-          {logoIsLoading || projectsIsLoading ||logoIsFetching||logoIsFetching?
-          <div>Loading...</div>
-          :
-          projectImages[activeTab].map((image, index) => (
-            <div className="first-project mx-1 mb-2 " key={index}>
-              <img
-                src={image}
-                alt={`Project ${index + 1}`}
-                className=" object-cover"
-              />
-            </div>
-          ))
+          {logoIsLoading || projectsIsLoading || logoIsFetching || logoIsFetching ?
+            <div>Loading...</div>
+            :
+            projectImages[activeTab].map((image, index) => (
+              <div className="first-project mx-1 mb-2 " key={index}>
+                <img
+                  src={image}
+                  alt={`Project ${index + 1}`}
+                  className=" object-cover"
+                />
+              </div>
+            ))
           }
-          
+
         </div>
       </div>
     </>

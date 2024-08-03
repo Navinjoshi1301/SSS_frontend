@@ -1,17 +1,17 @@
 // Main Component
 import React from 'react';
 import { Element } from 'react-scroll';
-import Home from '../home/Home';
-import homeimg from '../../assets/home.png';
-import Contact from '../contact us/Contact';
-import Footer from '../footer/Footer';
-import About from '../about us/About';
-import Gallery from '../our projects/Gallery';
-import ContactCard from '../contact card/ContactCard';
-import Companies from '../companies logos/Companies';
-import Testimonials from '../testimonial/Testimonials';
-import OurTeam from '../our team/OurTeam';
-import ServicesSection from '../services section/ServicesSection';
+import homeimg from '../assets/home.png';
+import Contact from './contact us/Contact';
+import Footer from './footer/Footer';
+import About from './about us/About';
+import Gallery from './our projects/Gallery';
+import ContactCard from './contact card/ContactCard';
+import Companies from './companies logos/Companies';
+import Testimonials from './testimonial/Testimonials';
+import OurTeam from './our team/OurTeam';
+import ServicesSection from './services section/ServicesSection';
+import Home from './home/Home';
 
 
 
