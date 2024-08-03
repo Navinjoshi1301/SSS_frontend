@@ -22,7 +22,7 @@ const ServicesSection = () => {
         return {
           description: attributes.description,
           title: attributes.title,
-          logoUrl: logoUrl 
+          logoUrl: attributes.img_url
         };
       });
 
