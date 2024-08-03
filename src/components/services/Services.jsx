@@ -1,6 +1,5 @@
 import  { useEffect, useState } from 'react';
 import { useGetServicesQuery } from '../../api/PortFolioApi';
-import { BASE_URL } from '../../api/Config';
 import ServiceCard from './ServiceCard';
 
 const ServicesSection = () => {
@@ -17,7 +16,7 @@ const ServicesSection = () => {
 
       const mappedServices = servicesArray.map(service => {
         const { attributes } = service;
-        const logoUrl = attributes.img_url ? `${BASE_URL}${attributes.img_url}` : null;
+        const logoUrl = attributes.img_url ? `${attributes.img_url}` : null;
 
         return {
           description: attributes.description,
