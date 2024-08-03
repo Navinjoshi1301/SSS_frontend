@@ -11,9 +11,7 @@ export const portFolioApi = createApi({
       }),
     }),
  
-
-  
-  getServices: builder.query({
+   getServices: builder.query({
       query: ({populate}) =>({
         url: configUrl.getServices+populate,
       }),
@@ -29,9 +27,28 @@ export const portFolioApi = createApi({
         url: configUrl.getInnovations,
       }),
     }),
+
+    getTeam: builder.query({
+      query: ({ populate }) => ({
+        url: configUrl.getTeam + populate,
+      }),
+    }),
+
+    getProjects: builder.query({
+      query: () => ({
+        url: configUrl.getProjects,
+      }),
+    }),
+
+    getTestimonials: builder.query({
+      query: () =>({
+        url: configUrl.getTestimonials,
+      }),
+    }),
+
   }),
  
 })
 
 
-export const { useGetLogosQuery , useGetServicesQuery ,useGetAboutUsQuery , useGetInnovationsQuery}= portFolioApi;
+export const { useGetLogosQuery , useGetServicesQuery ,useGetAboutUsQuery , useGetInnovationsQuery ,useGetTeamQuery , useGetTestimonialsQuery ,useGetProjectsQuery }= portFolioApi;
