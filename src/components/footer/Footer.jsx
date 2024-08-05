@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="md:text-left bg-gray-800 text-white p-6">
+        <div className="md:text-left bg-gray-800 text-white p-6 ">
           <p>© Singaji Software Solutions 2023 | All Rights Reserved</p>
         </div>
       </footer>

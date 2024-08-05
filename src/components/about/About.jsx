@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState ,useEffect} from 'react';
-import Innovation  from './Innovation'
+// import Innovation  from './Innovation'
 // import projectimg from '../../assets/projectimg1.jpg';
 // import backgroundImage from '../../../src/assets/service-bgImage.png'
 import {useGetAboutUsQuery} from '../../api/PortFolioApi'
@@ -29,6 +29,7 @@ export const About = () => {
 
   return (
     <>
+       <div className='container mx-auto'>
       <div className="grid grid-cols-1 md:grid-cols-2  p-8 md:p-12 bg-white rounded-lg shadow-sm mb-12">
         <div className="order-2 md:order-1 relative flex justify-center items-center">
           <img
@@ -54,7 +55,8 @@ export const About = () => {
           </p>
         </div>
       </div>
-      <Innovation/>
+      </div>
+      {/* <Innovation/> */}
     </>
   );
 };

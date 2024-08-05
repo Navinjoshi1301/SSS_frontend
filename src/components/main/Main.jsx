@@ -5,7 +5,6 @@ import Contact from '../contactUs/Contact';
 import Footer from '../footer/Footer';
 import About from '../about/About';
 import Gallery from '../gallery/Gallery';
-import ContactCard from '../cards/Cards';
 import Companies from '../companies/Companies';
 import Services from '../services/Services';
 import OurTeam from '../teams/OurTeam';
@@ -47,7 +46,6 @@ const Main = () => {
       <Element name="Contact Us +">
         <Contact />
       </Element>
-      <ContactCard />
       <Companies />
       <Footer />
     </div>

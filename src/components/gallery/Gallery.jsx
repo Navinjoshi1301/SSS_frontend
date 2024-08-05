@@ -27,13 +27,13 @@ const Gallery = () => {
   };
 
   return (
-    <div className="main-div">
+    <div className="container mx-auto">
       <div className="text-center">
         <span className="px-10 py-2 shadow rounded-full">OUR PROJECTS</span>
         <p className="font-bold text-cyan-500 text-5xl mt-5">Gallery</p>
 
         <div className="flex justify-center items-center mt-5 text-center mb-5">
-          <div className="tab-container bg-slate-50 w-1/3 rounded-lg font-semibold py-2">
+          <div className="tab-container bg-slate-50 w-3/4 rounded-lg font-semibold py-2">
             <div>
               <button
                 className={`px-4 py-2 mx-2 ${activeTab === "Applications" ? "text-primary-500" : "hover:text-blue-700"} rounded`}
@@ -58,7 +58,7 @@ const Gallery = () => {
         </div>
       </div>
 
-      <div className="justify-center px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="justify-center px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {categorizedProjects[activeTab]?.map((item) => (
           <div className="first-project mx-2" key={item.id}>
             <img
