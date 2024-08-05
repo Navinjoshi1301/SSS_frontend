@@ -31,16 +31,16 @@ const TestimonialsSection = () => {
   }, [TestData, error]);
 
   return (
-    <section id="testimonials" className="py-10">
+    <section id="testimonials" className="pt-8">
       <div className="bg-cover bg-center min-h-screen" style={{ backgroundImage: `url(${BGimg})` }}>
         <div className="text-center pt-10">
           <span className="text-sm font-semibold border rounded-2xl shadow-lg bg-white py-2 px-8">TESTIMONIALS</span>
           <h1 className="text-5xl font-bold mt-10">
             What Client <span className="text-cyan-400">Think</span> About Us?
           </h1>
-          <p className="text-gray-600 mt-4">Insights into Our Impact and Value.</p>
+          {/* <p className="text-gray-600 mt-4">Insights into Our Impact and Value.</p> */}
         </div>
-        <div className="container mx-auto px-4 py-10">
+        <div className="container mx-auto px-4 py-6">
           {isLoading ? (
             <p>Loading...</p>
           ) : error ? (
@@ -50,11 +50,11 @@ const TestimonialsSection = () => {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full md:w-1/2 p-4">
                   <div className="p-6 rounded-lg">
-                    <div className="flex flex-col md:flex-row">
+                    <div className="flex flex-col md:flex-row ">
                       <div className="w-full md:w-1/2 pr-4">
-                        <div className="relative">
-                          <img className="w-10/12 ml-3 rounded-lg" src={TEST} alt="testimonial" />
-                          <img className="absolute top-10 right-1 w-1/2 h-4/6 object-cover rounded-lg" src={testimonial.imgUrl} alt="client" />
+                        <div className="relative   ">
+                          <img className="hidden  md:block w-10/12 ml-3 rounded-lg" src={TEST} alt="testimonial" />
+                          <img className="md:absolute mx-auto top-10 right-1 w-1/2 h-4/6 object-cover rounded-lg" src={testimonial.imgUrl} alt="client" />
                         </div>
                       </div>
                       <div className="w-full md:w-1/2 mt-6 md:mt-0">

@@ -3,7 +3,7 @@ import ContactButton from '../contactButton/ContactButton';
 
 export const Home = () => {
   return (
-    <section className="bg-slate-gradient py-20">
+    <section className="bg-slate-gradient md:py-20 py-14">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="text-center md:text-left px-4">
           <div className="inline-block bg-white text-sm uppercase tracking-wide font-normal px-4 py-3 rounded-full mb-4 shadow-md">

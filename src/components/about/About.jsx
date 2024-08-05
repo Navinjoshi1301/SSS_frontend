@@ -31,16 +31,16 @@ export const About = () => {
     <>
        <div className='container mx-auto'>
       <div className="grid grid-cols-1 md:grid-cols-2  p-8 md:p-12 bg-white rounded-lg shadow-sm mb-12">
-        <div className="order-2 md:order-1 relative flex justify-center items-center">
+        <div className="order-2 md:order-1 relative flex justify-center items-center mt-8 md:mt-0">
           <img
              src={aboutImg.img1}
              alt="Background"
-             className=" w-48 sm:w-72 md:w-80 lg:w-96   h-auto   rounded-lg object-cover"
+             className=" w-60 sm:w-80 md:w-80 lg:w-96   h-auto   rounded-lg object-cover"
           />
           <img
           src={aboutImg.img2}          
           alt="Project"
-            className="absolute w-40 sm:w-60  md:w-64 lg:w-80 h-auto   lg:h-auto rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            className="absolute w-48 sm:w-64  md:w-64 lg:w-80 h-auto   lg:h-auto rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           />
         </div>
         <div className="order-1 md:order-2 text-center md:text-left md:pt-16">

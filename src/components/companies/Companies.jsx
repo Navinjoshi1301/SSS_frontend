@@ -24,8 +24,8 @@ const Companies = () => {
   ];
 
   return (
-    <div className="px-24 mb-10 container mx-auto mt-12">
-      <div className="flex justify-around">
+    <div className="px-24 mb-10 container mx-auto mt-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
         {companies.map(company => (
           <div key={company.name} className="">
             <img

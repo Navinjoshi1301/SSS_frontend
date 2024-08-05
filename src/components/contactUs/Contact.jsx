@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="relative z-10 flex justify-center">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-5 w-full lg:w-auto">
         <div className="w-full lg:w-[430px] lg:h-[535px] mt-6 lg:mt-[150px] lg:ml-4 md:w[]">
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start ">
             <span className='shadow bg-white rounded-full px-5 py-2'>GET IN TOUCH</span>
             <h1 className='font-bold text-left mt-2 text-5xl' style={{ color: '#101a29', lineHeight: '1.2em' }}>
             Bring your product<span className='text-cyan-400'> ideas to life</span>

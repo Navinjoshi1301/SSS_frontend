@@ -28,11 +28,11 @@ const Gallery = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="text-center">
+      <div className="text-center mt-20">
         <span className="px-10 py-2 shadow rounded-full">OUR PROJECTS</span>
-        <p className="font-bold text-cyan-500 text-5xl mt-5">Gallery</p>
+        <p className="font-bold text-cyan-500 text-5xl mt-8">Gallery</p>
 
-        <div className="flex justify-center items-center mt-5 text-center mb-5">
+        <div className="flex justify-center items-center mt-8 text-center mb-5">
           <div className="tab-container bg-slate-50 w-3/4 rounded-lg font-semibold py-2">
             <div>
               <button

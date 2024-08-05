@@ -8,8 +8,8 @@ import { Link } from 'react-scroll';
 const Footer = () => {
   return (
     <>
-      <footer className="pt-4">
-        <div className="container-fluid px-4 md:px-28 bg-slate-50">
+      <footer className=" pt-4 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-28 ">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-10">
             <div className="flex flex-col md:items-start">
               <img
@@ -29,7 +29,7 @@ const Footer = () => {
                 </li>
                 <li className="bg-slate-200 p-2 rounded-lg">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/singaji-software-solutions-pvt-ltd/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -98,9 +98,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div className="md:text-left bg-gray-800 text-white p-6 ">
-          <p>© Singaji Software Solutions 2023 | All Rights Reserved</p>
+         <div className=" bg-gray-800">
+        <div className="container mx-auto md:text-left text-white p-6 md:ps-28">
+          <p className="text-lg font-semibold">© Singaji Software Solutions 2023 | All Rights Reserved</p>
+        </div>
         </div>
       </footer>
     </>
