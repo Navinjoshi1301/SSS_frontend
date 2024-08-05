@@ -4,15 +4,6 @@ import Main from './components/MainComponent';
 import NavbarService from './components/navbar/NavbarService';
 
 function App() {
-  // demo links
-  // const links = [
-  //   { name: 'Home', href: '#' },
-  //   { name: 'About Us', href: '#' },
-  //   { name: 'Services', href: '#' },
-  //   { name: 'Our Team', href: '#' },
-  //   { name: 'Testimonials', href: '#' },
-  // ];
-  //demo data for home element
 
   return (
     <div>

@@ -14,7 +14,7 @@ const Navbar = ({ links = [], logo, contactText }) => {
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-14 mr-5" />
+          <img src={logo}className="h-14 mr-5" />
         </div>
         <div className="hidden lg:flex flex-grow justify-center">
           <ul className="flex space-x-8 font-bold">

@@ -64,7 +64,7 @@ const Gallery = () => {
   };
   return (
     <>
-      <div className="main-div">
+      <div className=" container mx-auto main-div">
         <nav className="text-center">
           <span className="text-md text-gray-950 uppercase mb-3 bg-white inline-block px-5 py-1 rounded-3xl shadow-md tracking-wider mt-4">OUR PROJECTS</span>
           <p className="font-bold text-cyan-500 text-5xl mt-5">Gallery</p>

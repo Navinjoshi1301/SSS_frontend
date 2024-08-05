@@ -20,10 +20,10 @@ const Companies = () => {
 
   return (
     <>
-      <div className="px-0 md:px-20 lg:px:24 mb-10">
-        <div className="block p-1 md:flex justify-around">
+      <div className=" container mx-auto px-0 md:px-20 lg:px:24 mb-10">
+        <div className="block p-1 md:grid grid-cols-2 lg:grid-cols-4 justify-around md:my-10">
           {logos.map((logo,index) => (
-            <div key={index} className="m-2 md:m-0">
+            <div key={index} className="m-2 md:m-1">
               <img src={logo.attributes.img_url} />
             </div>
           ))}

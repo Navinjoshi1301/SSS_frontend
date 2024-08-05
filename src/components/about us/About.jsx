@@ -26,7 +26,7 @@ export const About = () => {
 
   return (
     <>
-       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-12 bg-white rounded-lg shadow-sm mb-12">
+       <div className=" container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-12 bg-white rounded-lg shadow-sm mb-12">
       <div className="order-2 md:order-1 relative flex justify-center items-center">
         <img
           src={aboutImg.img1}

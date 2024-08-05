@@ -10,7 +10,7 @@ import { FaLocationArrow } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <footer className="pt-4">
+      <footer className=" container mx-auto pt-4">
         <div className="container-fluid px-4 md:px-28 bg-slate-50">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-10">
             <div className="flex flex-col items-center md:items-start">
@@ -114,7 +114,7 @@ const Footer = () => {
         </div> */}
         </div>
 
-        <div className="text-center md:text-left bg-gray-800 text-white p-6  px-28 ">
+        <div className=" text-center md:text-left bg-gray-800 text-white p-6  px-28 ">
           <p>© Singaji Software Solutions 2023 | All Rights Reserved</p>
         </div>
       </footer>
