@@ -11,6 +11,7 @@ const Navbar = ({ links=[], logo, contactText }) => {
 
   // console.log('%c [ url ]-16', 'font-size:13px; background:pink; color:#bf2c9f;', logo.url)
   return (
+   
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
@@ -82,6 +83,7 @@ const Navbar = ({ links=[], logo, contactText }) => {
         </ul>
       </div>
     </nav>
+   
   );
 };
 

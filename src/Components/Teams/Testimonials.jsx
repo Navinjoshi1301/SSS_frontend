@@ -31,6 +31,7 @@ const Testimonials= () => {
   }, [TestData, error]);
 
   return (
+   
     <section id="testimonials" className="py-10">
       <div className="bg-cover bg-center min-h-screen" style={{ backgroundImage: `url(${BGimg})` }}>
         <div className="text-center pt-10">
@@ -80,6 +81,7 @@ const Testimonials= () => {
         </div>
       </div>
     </section>
+ 
   );
 };
 

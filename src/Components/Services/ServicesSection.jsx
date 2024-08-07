@@ -17,7 +17,7 @@ const ServicesSection = () => {
 
       const mappedServices = servicesArray.map(service => {
         const { attributes } = service;
-        // const logoUrl = attributes.img_url ? `${BASE_URL}${attributes.img_url}` : null;
+       
 
         return {
           description: attributes.description,
@@ -31,6 +31,7 @@ const ServicesSection = () => {
   }, [sss, error]);
 
   return (
+   
     <div className='bg-Service-bg bg-cover bg-center h-auto'>
       <div className="container mx-auto py-12 px-4 md:px-12 lg:px-40">
         <div className="text-center mb-12">
@@ -55,6 +56,7 @@ const ServicesSection = () => {
         )}
       </div>
     </div>
+  
   );
 };
 

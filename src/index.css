@@ -2,9 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    max-width: 1600px;
-    margin: 0 ;
-    padding: 0;
-    text-align: center;
-}

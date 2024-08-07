@@ -16,7 +16,7 @@ const TeamProjects = () => {
 
   const filteredLogos = logos?.data.filter(logo => [8, 7, 6].includes(logo.id));
 
-  // Categorize projects and logos
+  
   const categorizedProjects = {
     Applications: projects?.data.slice(0, 3),  
     Branding: filteredLogos,
@@ -28,7 +28,7 @@ const TeamProjects = () => {
   };
 
   return (
-    <div className="main-div">
+    <div className="container mx-auto" >
       <div className="text-center">
         <span className="px-10 py-2 shadow rounded-full">OUR PROJECTS</span>
         <p className="font-bold text-cyan-500 text-5xl mt-5">Gallery</p>

@@ -24,7 +24,8 @@ const Companies = () => {
   ];
 
   return (
-    <div className="px-24 mb-10">
+    
+    <div className=" mt-20 px-24 mb-10  container mx-auto">
       <div className="flex justify-around">
         {companies.map(company => (
           <div key={company.name} className="">
@@ -37,6 +38,7 @@ const Companies = () => {
         ))}
       </div>
     </div>
+   
   );
 };
 

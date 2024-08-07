@@ -7,7 +7,6 @@ import Contact from '../Components/Contact/Contact';
 import Footer from '../Components/Footer/Footer';
 import About from '../Components/About/About';
 import Gallery from './Teams/TeamProjects';
-import Cards from '../Components/Cards';
 import Companies from '../Components/Teams/Companies';
 import Testimonials from '../Components/Teams/Testimonials';
 import Ourteam from './Teams/OurTeam';
@@ -51,7 +50,7 @@ const Main = () => {
       <Element name="Contact Us +">
         <Contact />
       </Element>
-      <Cards/>
+      
       <Companies/>
       <Footer/>
     </div>
